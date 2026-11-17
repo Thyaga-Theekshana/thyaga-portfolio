@@ -9,20 +9,21 @@
 html,
 body {
   width: 100%;
+  min-height: 100%;
+}
+
+html {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: #12100e;
   color: #f5f1e8;
   font-family: "Inter", Arial, Helvetica, sans-serif;
-}
-
-.portfolio-page {
-  height: 100vh;
-  height: 100svh;
 }
 
 .nav-link {
