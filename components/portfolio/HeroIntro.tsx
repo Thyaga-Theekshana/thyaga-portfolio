@@ -1,4 +1,18 @@
+"use client";
+
 import Link from "next/link";
+
+function downloadCv() {
+  if (!window.confirm("Do you want to download Thyaga's CV?")) return;
+
+  const downloadLink = document.createElement("a");
+  downloadLink.href = "/CV.pdf";
+  downloadLink.download = "Thyaga_Theekshana_CV.pdf";
+  downloadLink.rel = "noopener";
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  downloadLink.remove();
+}
 
 export default function HeroIntro() {
   return (
@@ -36,13 +50,13 @@ export default function HeroIntro() {
             />
           </svg>
         </Link>
-        <a
-          href="/cv.pdf"
-          download
-          className="inline-flex min-h-10 flex-1 items-center justify-center rounded-full border border-[#d6a858]/60 bg-[#1a1612]/50 px-3 text-center text-[10px] font-semibold text-[#f5f1e8] transition-colors hover:border-[#e6b866] hover:bg-[#2a2119] sm:min-h-11 sm:px-4 sm:text-[12px]"
+        <button
+          type="button"
+          onClick={downloadCv}
+          className="inline-flex min-h-10 flex-1 cursor-pointer items-center justify-center rounded-full border border-[#d6a858]/60 bg-[#1a1612]/50 px-3 text-center text-[10px] font-semibold text-[#f5f1e8] transition-colors hover:border-[#e6b866] hover:bg-[#2a2119] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e6b866] sm:min-h-11 sm:px-4 sm:text-[12px]"
         >
           Download CV
-        </a>
+        </button>
       </div>
     </div>
   );
