@@ -5,7 +5,7 @@ import SiteHeader from "../components/portfolio/SiteHeader";
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-[calc(100vh+100px)] w-full flex-col justify-between overflow-x-hidden overflow-y-auto bg-[#12100e] text-[#f5f1e8]">
+    <main className="relative flex min-h-[calc(100vh+250px)] w-full flex-col justify-between overflow-x-hidden overflow-y-auto bg-[#12100e] text-[#f5f1e8]">
       <div
         aria-hidden="true"
         className="ambient-glow pointer-events-none absolute inset-0"
