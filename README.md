@@ -1,6 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thyaga Theekshana - Portfolio
 
-## Getting Started
+This is my personal portfolio website built with Next.js, React, and Tailwind CSS, showcasing my projects, technical skills, and professional background.
+
+## 🚀 Live Demo
+
+You can view the live website here:
+🔗 [https://c4920bf0.thyaga-portfolio.pages.dev](https://c4920bf0.thyaga-portfolio.pages.dev)
+
+## 🛠️ Built With
+
+- **Framework:** Next.js (Static Export)
+- **Styling:** Tailwind CSS
+- **Deployment:** Cloudflare Pages (Direct Upload via Wrangler CLI)
+
+## 📦 Getting Started Locally
 
 First, run the development server:
 
@@ -12,29 +25,11 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚢 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To build and deploy updates to Cloudflare Pages using the Wrangler CLI:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Cloudflare Pages
-
-This project uses Next.js static export for Cloudflare Pages.
-
-- Build command: `npm run build`
-- Build output directory: `out`
-- Do not add a Worker service binding such as `WORKER_SELF_REFERENCE`; static Pages hosting does not need a Worker self-reference.
-
-If a service binding was added in the Cloudflare dashboard, remove it from the Pages project's environment bindings.
+```bash
+npm run build
+npx wrangler pages deploy .\out --project-name thyaga-portfolio --branch develop
