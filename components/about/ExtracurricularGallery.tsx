@@ -65,10 +65,18 @@ export default function ExtracurricularGallery({
                   aria-hidden="true"
                   className="absolute inset-0 bg-gradient-to-t from-[#100d0b]/95 via-[#100d0b]/20 to-transparent"
                 />
+                <span
+                  aria-hidden="true"
+                  className={`absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 to-black/20 transition-opacity duration-300 ${
+                    isExpanded
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
+                  }`}
+                />
                 <span className="absolute inset-x-0 bottom-0 p-4 sm:p-6">
                   <span className="flex items-end justify-between gap-3">
                     <span>
-                      <span className="block text-lg font-semibold tracking-[-0.025em] text-[#fffaf0] sm:text-xl">
+                      <span className="block text-lg font-semibold tracking-[-0.025em] text-amber-400 sm:text-xl">
                         {photo.title}
                       </span>
                       <span className="mt-1 block text-xs font-medium text-[#e6b866] sm:text-sm">
@@ -91,13 +99,13 @@ export default function ExtracurricularGallery({
                     }`}
                   >
                     <span className="min-h-0 overflow-hidden">
-                      <span className="block border-t border-white/15 pt-3 text-[10px] leading-[1.55] text-[#e5dac8] sm:text-xs">
-                        <span className="font-semibold text-[#f5f1e8]">
+                      <span className="block border-t border-white/15 pt-3 text-xs leading-relaxed text-zinc-200 sm:text-sm">
+                        <span className="font-semibold text-amber-400">
                           Organized by:
                         </span>{" "}
                         {photo.organizer}
                       </span>
-                      <span className="mt-2 block text-[10px] leading-[1.55] text-[#d3c5ae] sm:text-xs">
+                      <span className="mt-2 block text-xs leading-relaxed text-zinc-200 sm:text-sm">
                         {photo.overview}
                       </span>
                     </span>
