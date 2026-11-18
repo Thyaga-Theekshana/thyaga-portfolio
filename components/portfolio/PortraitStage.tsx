@@ -3,7 +3,7 @@ import TechnologyOrbit from "./TechnologyOrbit";
 
 export default function PortraitStage() {
   return (
-    <div className="portrait-stage relative h-full min-h-[150px] w-full md:min-h-0">
+    <div className="portrait-stage relative h-full min-h-[min(86vw,540px)] w-full md:min-h-0">
       <div className="portrait-mask absolute inset-0 z-[1]">
         <Image
           src="/profile.png"
