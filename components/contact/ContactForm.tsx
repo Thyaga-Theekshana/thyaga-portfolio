@@ -16,6 +16,7 @@ export default function ContactForm() {
     const body = `Hi Thyaga,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`;
     const mailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+    event.currentTarget.reset();
     window.location.href = mailtoUrl;
   }
 
