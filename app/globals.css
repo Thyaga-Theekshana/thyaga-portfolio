@@ -89,6 +89,21 @@ body {
   mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
 }
 
+.tech-orbit-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(86%, 540px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+
+.tech-orbit-track {
+  position: absolute;
+  inset: 0;
+  animation: tech-orbit 48s linear infinite;
+}
+
 .tech-float {
   position: absolute;
   display: grid;
@@ -114,6 +129,7 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.5;
+  animation: tech-counter-orbit 48s linear infinite;
 }
 
 .tech-float .tech-glyph-fill {
@@ -152,8 +168,25 @@ body {
   }
 }
 
+@keyframes tech-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tech-counter-orbit {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .tech-orbit-track,
   .tech-float {
+    animation: none;
+  }
+
+  .tech-float svg {
     animation: none;
   }
 }

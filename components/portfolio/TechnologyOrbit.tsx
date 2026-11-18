@@ -67,21 +67,23 @@ function TechGlyph({ name }: { name: string }) {
 export default function TechnologyOrbit() {
   return (
     <div
-      className="relative z-10 h-full w-full"
+      className="tech-orbit-frame"
       role="group"
       aria-label="Technology icons"
     >
-      {technologies.map(({ name, position }) => (
-        <span
-          key={name}
-          className={`tech-float ${position}`}
-          title={name}
-          role="img"
-          aria-label={name}
-        >
-          <TechGlyph name={name} />
-        </span>
-      ))}
+      <div className="tech-orbit-track">
+        {technologies.map(({ name, position }) => (
+          <span
+            key={name}
+            className={`tech-float ${position}`}
+            title={name}
+            role="img"
+            aria-label={name}
+          >
+            <TechGlyph name={name} />
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
