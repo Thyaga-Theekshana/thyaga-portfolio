@@ -52,9 +52,11 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="relative z-10 mt-10 w-full border-t border-[#e6b866]/15">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-5 px-5 py-6 text-center sm:px-8 md:flex-row md:text-left lg:px-16">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-4 px-5 py-6 text-center sm:px-8 lg:px-16">
         <p className="text-xs leading-5 text-[#a99d8d] sm:text-sm">
-          © 2026 Thyaga Theekshana. All Rights Reserved.
+          Designed &amp; Built by{" "}
+          <span className="font-medium text-[#e6b866]">Thyaga Theekshana</span>{" "}
+          © 2026
         </p>
 
         <nav
